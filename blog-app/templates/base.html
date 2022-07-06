@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link type="text/css" href="" rel="stylesheet" />
+{% block title -%}
+{% if title %}
+         <title>{{title}}</title>
+{% else %}
+         <title>Flask</title>
+{% endif %}
+{% endblock %}
+</head>
+<body>
+{% block content -%}
+         {%- block mainmenu -%}
+<ul>
+
+<li><a href="/">Статьи</a></li>
+<li><a href="/add_post">Добавить статью</a></li>
+
+</ul>
+         {% endblock mainmenu -%}
+<div></div>
+<div>
+         {% if title -%}
+<h1>{{title}}</h1>
+         {% else -%}
+<h1>Про Flask</h1>
+         {% endif -%}
+{% endblock -%}
+</div>
+</body>
+</html>
